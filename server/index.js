@@ -50,6 +50,7 @@ app.get('/todo/:id',async(req,res)=>{
          const updateItem = await pool.query("UPDATE todo SET work = $1 WHERE tid = $2",[work,id]);
          res.json("todo list was updated");
     } catch (error) {
+        
         console.log(error.message);
     }
    
